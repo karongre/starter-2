@@ -1,0 +1,57 @@
+html{
+    scroll-behavior: smooth;
+}
+body > a :first-child{
+    position: absolute;
+    top: -50px;
+}
+body > a :first-child{
+    position: absolute;
+    top: -50px;
+}
+.current{
+    color: darkgreen
+}
+
+.container{
+    display: grid;
+    width: 100%
+}
+.skip{
+    position: absolute;
+    top: -40px;
+
+}
+.active a{
+    color: rgb(93, 62, 22);
+    opacity: 0.9;
+
+}
+.pets {
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: 20px;
+}
+.recipes {
+    display: inline-grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: 20px;
+   
+}
+.cell{
+    background-color: teal;
+    border: 1px solid;
+}
+.recipes img{
+    width: 300px;
+    height: 300px;
+    object-fit: contain;
+    display: block;
+    margin: 20px 0;
+}
+@media screen and (max-width: 576px ) {
+    .pets{
+        grid-template-columns: 1fr;
+        gap: 10px;
+    }
+}
