@@ -1,56 +1,121 @@
-html{
+html {
     scroll-behavior: smooth;
 }
-body > a :first-child{
-    position: absolute;
-    top: -50px;
-}
-body > a :first-child{
-    position: absolute;
-    top: -50px;
-}
-.current{
-    color: darkgreen
+
+ul {
+    list-style: none;
 }
 
-.container{
+a {
+    text-decoration: none;
+}
+
+.container {
     display: grid;
     width: 100%
 }
-.skip{
+
+.skip {
     position: absolute;
     top: -40px;
 
 }
-.active a{
+
+header {
+    display: flex;
+    justify-content: center;
+    padding: 20px 0;
+}
+
+header nav ul {
+    display: flex;
+
+}
+
+header nav ul li {
+    margin-right: 20px;
+}
+
+header nav ul li a {
+    font-size: 18px;
+    color: teal;
+}
+
+.active a {
     color: rgb(93, 62, 22);
     opacity: 0.9;
-
+    text-decoration: underline;
+}
+.pets-content h2{
+    text-align: center;
 }
 .pets {
     display: grid;
-    grid-template-columns: repeat(3,1fr);
+    grid-template-columns: repeat(3, 1fr);
     gap: 20px;
+}
+.pets .pet{
+    background-color:#FFFDD0;
+    padding: 20px;
+}
+.pets .pet h3{
+    text-align: center;
+}
+.pets .pet img{
+    width: 100%;
+    display: block;
+    object-fit: contain;
+    margin: 10px auto;
+    height: 200px;
+
 }
 .recipes {
-    display: inline-grid;
-    grid-template-columns: repeat(3,1fr);
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
     gap: 20px;
-   
+
 }
-.cell{
-    background-color: teal;
-    border: 1px solid;
+
+.cell {
+    background-color:#FFFDD0;
+    padding: 20px;
+    text-align: center;
 }
-.recipes img{
-    width: 300px;
+
+.recipes img {
+    width: 100%;
     height: 300px;
     object-fit: contain;
     display: block;
-    margin: 20px 0;
+    margin: 20px auto;
 }
-@media screen and (max-width: 576px ) {
-    .pets{
+.recipes ul li {
+    margin-bottom: 10px;
+}
+.travel-content h2{
+    text-align: center;
+}
+.travel-content img {
+    width: 100%;
+}
+
+.travel-images {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+}
+.travel-item{
+    background-color:#FFFDD0;
+    padding: 20px;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+
+@media screen and (max-width: 576px) {
+
+    .pets,
+    .travel-images, .recipes {
         grid-template-columns: 1fr;
         gap: 10px;
     }
